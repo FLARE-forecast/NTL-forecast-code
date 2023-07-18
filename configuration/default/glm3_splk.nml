@@ -68,7 +68,6 @@
    rad_mode = 1
    albedo_mode = 1
    cloud_mode = 4
-   meteo_fl = '/Users/quinn/Dropbox/Research/SSC_forecasting/glm_aed_forecasts/model_output_historical/FCR_GLM_NLDAS_010113_123119_GMTadjusted.csv'
    subdaily = .true.
    wind_factor = 1.0
    sw_factor = 1.0
