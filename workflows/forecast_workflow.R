@@ -15,6 +15,8 @@ source('workflows/default/generate_targets.R')
 cuts <- tibble::tibble(cuts = as.integer(factor(config$model_settings$modeled_depths)),
                        depth = config$model_settings$modeled_depths)
 
+https://raw.githubusercontent.com/pschramm93/NTL_flare/main/sp_daily.csv?token=GHSAT0AAAAAACFDO2BF47S5PMZK3XIHXAWWZFWU52Q
+
 cleaned_insitu_file <- file.path(lake_directory, "targets", config$location$site_id, config$da_setup$obs_filename)
 readr::read_csv(cleaned_insitu_file, show_col_types = FALSE) |> 
   dplyr::mutate(cuts = cut(depth, breaks = config$model_settings$modeled_depths, include.lowest = TRUE, right = FALSE, labels = FALSE)) |>

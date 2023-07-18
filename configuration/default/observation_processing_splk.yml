@@ -2,10 +2,10 @@
 # Lake information
 ###########################
 
-site_id: splk
+lake_name_code: splk
 lake_name: Sparkling Lake
-   latitude: 46.008235   #Degrees North
-   longitude: -89.699981  #Degrees East
+lake_latitude: 46.008235   #Degrees North
+lake_longitude: -89.699981  #Degrees East
 
 #Time zone that GLM is run in
 #Currently needed to be GMT so that it interfaces with the NOAA forecast
@@ -15,14 +15,13 @@ local_tzone: "UTC"
 
 noaa_location: splk
 
-met_raw_obs_fname:
-    - fcre-metstation-data/FCRmet_L1.csv
-    - Met_final_2015_2022.csv
+met_raw_obs_fname: .na
+
 #specified_metfile: .na #NA #paste0(manual_data_location, "/met_full_postQAQC.csv")
 
-downscaling_coeff: fcre-manual-data/debiased.coefficients.2018_07_12_2019_07_11.RData
+downscaling_coeff: .na
 
-nldas: fcre-manual-data/FCR_GLM_NLDAS_010113_123119_GMTadjusted.csv
+nldas: .na
 
 #########################
 ### Depth information
