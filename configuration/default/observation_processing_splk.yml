@@ -2,7 +2,7 @@
 # Lake information
 ###########################
 
-lake_name_code: splk
+lake_name_code: SPLK
 lake_name: Sparkling Lake
 lake_latitude: 46.008235   #Degrees North
 lake_longitude: -89.699981  #Degrees East
@@ -13,7 +13,7 @@ lake_longitude: -89.699981  #Degrees East
 #Local time zone of the lake
 local_tzone: "UTC"
 
-noaa_location: splk
+noaa_location: SPLK
 
 met_raw_obs_fname: .na
 

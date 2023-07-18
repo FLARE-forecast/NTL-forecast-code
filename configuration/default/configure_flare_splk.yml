@@ -4,10 +4,10 @@ s3:
     bucket: drivers/noaa/gefs-v12-reprocess
   inflow_drivers:
     endpoint: s3.flare-forecast.org
-    bucket: drivers/inflow/ccre/parquet
+    bucket: drivers/inflow/SPLK/parquet
   targets:
     endpoint: s3.flare-forecast.org
-    bucket: targets/splk
+    bucket: targets/SPLK
   forecasts:
     endpoint: s3.flare-forecast.org
     bucket: forecasts
@@ -16,13 +16,13 @@ s3:
     bucket: forecasts/parquet
   warm_start:
     endpoint: s3.flare-forecast.org
-    bucket: restart/splk
+    bucket: restart/SPLK
   scores:
     endpoint: s3.flare-forecast.org
     bucket: scores/parquet
     
 location:
-   site_id: splk
+   site_id: SPLK
    name: Sparkling Lake
    latitude: 46.008235   #Degrees North
    longitude: -89.699981  #Degrees East
@@ -34,11 +34,11 @@ da_setup:
     no_negative_states: TRUE
     assimilate_first_step: FALSE
     use_obs_constraint: TRUE
-    obs_filename: splk-targets-insitu.csv
+    obs_filename: SPLK-targets-insitu.csv
 model_settings:
    ncore: 4
    model_name: glm
-   base_GLM_nml: glm3_splk.nml
+   base_GLM_nml: glm3_SPLK.nml
    modeled_depths: [0.0,0.25,0.50,0.75,
                     1.00,1.25,1.50,1.75,
                     2.00,2.25,2.50,2.75,
@@ -59,10 +59,10 @@ model_settings:
                     17.00,17.50,
                     18.00,18.50,
                     19.00]
-   par_config_file: parameter_calibration_config_splk.csv
-   obs_config_file: observations_config_splk.csv
-   states_config_file: states_config_splk.csv
-   depth_model_sd_config_file: depth_model_sd_splk.csv
+   par_config_file: parameter_calibration_config_SPLK.csv
+   obs_config_file: observations_config_SPLK.csv
+   states_config_file: states_config_SPLK.csv
+   depth_model_sd_config_file: depth_model_sd_SPLK.csv
 default_init:
    lake_depth: 19.2
    temp: [3.6, 3.5, 3.4, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3, 3.3]

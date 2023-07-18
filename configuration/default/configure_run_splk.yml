@@ -4,8 +4,8 @@ end_datetime: .na
 forecast_start_datetime:  2023-07-17 00:00:00
 forecast_horizon: 34.0
 sim_name: sparkle_test
-configure_flare: configure_flare_splk.yml
-configure_obs: observation_processing_splk.yml
+configure_flare: configure_flare_SPLK.yml
+configure_obs: observation_processing_SPLK.yml
 use_s3: false
 
 
