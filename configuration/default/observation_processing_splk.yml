@@ -48,8 +48,7 @@ depths_bins_top: [0.00, 0.10, 0.50, 1.00,
 realtime_temp_location: data
 realtime_met_station_location: data
 
-insitu_obs_fname:
-    - temp_data.csv
+insitu_obs_fname: .na
 
 variable_obsevation_depths: FALSE
 

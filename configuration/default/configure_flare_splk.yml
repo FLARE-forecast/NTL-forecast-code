@@ -1,3 +1,26 @@
+s3:
+  drivers:
+    endpoint: s3.flare-forecast.org
+    bucket: drivers/noaa/gefs-v12-reprocess
+  inflow_drivers:
+    endpoint: s3.flare-forecast.org
+    bucket: drivers/inflow/ccre/parquet
+  targets:
+    endpoint: s3.flare-forecast.org
+    bucket: targets/splk
+  forecasts:
+    endpoint: s3.flare-forecast.org
+    bucket: forecasts
+  forecasts_parquet:
+    endpoint: s3.flare-forecast.org
+    bucket: forecasts/parquet
+  warm_start:
+    endpoint: s3.flare-forecast.org
+    bucket: restart/splk
+  scores:
+    endpoint: s3.flare-forecast.org
+    bucket: scores/parquet
+    
 location:
    site_id: splk
    name: Sparkling Lake
@@ -61,7 +84,6 @@ met:
    local_directory: .na
    observed_met_filename: .na
    use_ler_vars: FALSE
-   forecast_lag_days: 1
 uncertainty:
    observation: TRUE
    process: TRUE
@@ -72,4 +94,4 @@ uncertainty:
 output_settings:
    diagnostics_names:  [extc]
    evaluate_past: FALSE
-   variables_in_scores: [state, parameter, diagnostic]
+   variables_in_scores: [state, parameter]
