@@ -6,6 +6,6 @@ forecast_horizon: 34.0
 sim_name: sparkle_test
 configure_flare: configure_flare_splk.yml
 configure_obs: observation_processing_splk.yml
-use_s3: false
+use_s3: true
 
 
