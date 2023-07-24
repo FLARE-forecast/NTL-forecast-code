@@ -3,7 +3,7 @@ library(lubridate)
 
 lake_directory <- here::here()
 config_set_name <- "default"
-forecast_site <- c("SPLK")
+forecast_site <- c("splk")
 configure_run_file <- paste0("configure_run_",forecast_site,".yml")
 config <- FLAREr::set_configuration(configure_run_file,lake_directory, config_set_name = config_set_name)
 

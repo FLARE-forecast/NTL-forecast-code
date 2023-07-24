@@ -2,7 +2,7 @@ library(tidyverse)
 library(lubridate)
 lake_directory <- here::here()
 setwd(lake_directory)
-forecast_site <- c("SPLK")
+forecast_site <- c("splk")
 
 configure_run_file <- paste0("configure_run_",forecast_site,".yml")
 config_set_name <- "default"
