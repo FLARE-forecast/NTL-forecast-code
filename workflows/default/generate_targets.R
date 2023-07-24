@@ -13,8 +13,9 @@ config_obs <- FLAREr::initialize_obs_processing(lake_directory,
 
 dir.create(file.path(lake_directory, "targets", config$location$site_id), showWarnings = FALSE)
 
-cleaned_insitu_file <- read_csv("https://raw.githubusercontent.com/pschramm93/NTL_flare/main/sp_daily.csv",
-                   col_names = c("datetime","depth","observation","site_id","variable")) %>% 
+cleaned_insitu_file <- read_csv("https://raw.githubusercontent.com/pschramm93/NTL_flare/main/D%3A/admin/Desktop/sp_daily.csv",
+                   col_names = c("drop","datetime","depth","observation","site_id","variable")) %>% 
+  select(-drop) %>% 
   mutate(site_id = forecast_site)
 
 write_csv(cleaned_insitu_file,file.path(lake_directory,"targets", 
