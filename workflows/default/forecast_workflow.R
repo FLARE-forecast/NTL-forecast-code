@@ -4,6 +4,10 @@ lake_directory <- here::here()
 setwd(lake_directory)
 forecast_site <- c("splk")
 
+Sys.setenv("AWS_DEFAULT_REGION" = "renc",
+           "AWS_S3_ENDPOINT" = "osn.xsede.org",
+           "USE_HTTPS" = TRUE)
+
 configure_run_file <- paste0("configure_run_",forecast_site,".yml")
 config_set_name <- "default"
 
