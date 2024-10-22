@@ -10,7 +10,7 @@ lake_directory <- here::here()
 setwd(lake_directory)
 forecast_site <- "SPLK"
 #configure_run_file <- paste0("configure_run.yaml")
-configure_run_file <- paste0("configure_run_",forecast_site,".yml")
+configure_run_file <- paste0("configure_run_splk",".yml")
 config_set_name <- "glm_flare_v3"
 
 #' Source the R files in the repository
