@@ -16,8 +16,8 @@ config_set_name <- "glm_flare_v3"
 #' Source the R files in the repository
 #walk(list.files(file.path(lake_directory, "R"), full.names = TRUE), source)
 
-Sys.setenv("AWS_DEFAULT_REGION" = "renc",
-           "AWS_S3_ENDPOINT" = "osn.xsede.org",
+Sys.setenv("AWS_DEFAULT_REGION" = "amnh1",
+           "AWS_S3_ENDPOINT" = "osn.mghpcc.org",
            "USE_HTTPS" = TRUE)
 
 config_obs <- yaml::read_yaml(file.path(lake_directory,'configuration',config_set_name,'observation_processing_splk.yml'))
@@ -42,7 +42,7 @@ noaa_ready <- FLAREr::check_noaa_present(lake_directory,
 ### TARGETS ###
 
 if (noaa_ready){
-config_obs <- FLAREr::initialize_obs_processing(lake_directory, 
+config_obs <- FLAREr:::initialize_obs_processing(lake_directory, 
                                                 observation_yml = paste0("observation_processing_splk",".yml"), 
                                                 config_set_name = config_set_name)
 
@@ -75,7 +75,7 @@ readr::read_csv(cleaned_insitu_file, show_col_types = FALSE) |>
 
 message("Successfully generated targets")
 
-FLAREr::put_targets(site_id =  config$location$site_id,
+FLAREr:::put_targets(site_id =  config$location$site_id,
                     cleaned_insitu_file = cleaned_insitu_file,
                     cleaned_met_file = NA,
                     cleaned_inflow_file = NA,
@@ -136,7 +136,7 @@ while(noaa_ready){
                                            use_s3 = config$run_config$use_s3,
                                            bucket = config$s3$scores$bucket,
                                            endpoint = config$s3$scores$endpoint,
-                                           local_directory = './NEON-forecast_code/scores/SPLK',
+                                           local_directory = './NTL-forecast_code/scores/SPLK',
                                            variable_types = c("state","parameter"))
   
   
